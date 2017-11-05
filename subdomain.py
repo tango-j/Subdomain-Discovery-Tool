@@ -4,6 +4,11 @@ from time import sleep
 
 site = raw_input("Please specify the Parent domain: ")
 
+print "Script is preparing the dorks to enumerate the sub-domain"
+print "............................."
+print "............................."
+print "Script takes approximately 5 minutes to complete. In the mean time have a sip of coffee :)"
+
 #Initalize with simple Dorks
 z = "site:*." + site + " " + "-www"
 #print z
@@ -74,7 +79,7 @@ else:
         #setting up the payload
         payload = { 'q' : z }
 
-        sleep(randint(20,25))
+        sleep(randint(10,15))
     
         #Getting the response in an Object r
         r = requests.get( url, params = payload, headers = my_headers )
@@ -133,7 +138,12 @@ for p in urls:
     print str(a)
     i = i + 1
 
-
+print "+++++++++++++++++++++++++++++++++++++++++"
+print "+++++++++++++++++++++++++++++++++++++++++"
+print "+++Output will be printed out shortly++++"
+print "+++++++++++++++++++++++++++++++++++++++++"
 print "The last dork used was : " + z  + "\n"
+print "-----------------------------------------"
+print "-----------------------------------------"
 print "For accurate results please manually copy paste the last dork displayed above in google search engine after few minutes."    
     
